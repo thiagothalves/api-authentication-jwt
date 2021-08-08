@@ -3,6 +3,8 @@ import pkg from 'jsonwebtoken';
 
 const { verify, sign } = pkg;
 
+const PORT = 5000;
+
 const app = express();
 
 const verifyToken = (req, res, next) => {
@@ -55,4 +57,4 @@ app.post('/api/login', (req, res) => {
 
 
 
-app.listen(5000, () => console.log('Server started on port 5000'));
+app.listen(PORT, () => console.log('Server started on port ' + PORT));
